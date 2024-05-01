@@ -94,12 +94,14 @@
     }, 300);
 function updateStatus(secondsRemaining){
 
-    secondsRemaining = (secondsRemaining >0)?secondsRemaining:'Refresh';
-
-    $("#buttons").html(secondsRemaining);
     if(secondsRemaining==0){
         $("#buttons").removeAttr("disabled");
     }
+
+    secondsRemaining = (secondsRemaining >0)?secondsRemaining:'Refresh';
+
+    $("#buttons").html(secondsRemaining);
+  
 
 
 }
