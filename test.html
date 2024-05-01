@@ -97,10 +97,14 @@ function updateStatus(secondsRemaining){
     secondsRemaining = (secondsRemaining >0)?secondsRemaining:'Refresh';
 
     $("#buttons").html(secondsRemaining);
+    if(secondsRemaining==0){
+        $("#buttons").removeAttr("disabled");
+    }
 
 
 }
     function refreshme() {
+        $("#buttons").attr("disabled", true);
         getdata();
         var secondsBetweenActions = 5;
         var secondsRemaining = secondsBetweenActions;
